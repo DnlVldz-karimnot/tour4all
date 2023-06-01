@@ -158,6 +158,8 @@ const Index = () => {
 
         <style jsx>
           {`
+            @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
             @media (max-width: 991.98px) {
               .hero-1 {
                 background-color: #1f61eb;
