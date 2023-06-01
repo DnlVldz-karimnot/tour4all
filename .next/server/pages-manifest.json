@@ -1,0 +1,17 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/advertisements": "pages/advertisements.html",
+  "/auth": "pages/auth.html",
+  "/companies": "pages/companies.html",
+  "/home": "pages/home.html",
+  "/login": "pages/login.html",
+  "/": "pages/index.html",
+  "/organizations": "pages/organizations.html",
+  "/register": "pages/register.html",
+  "/vehicles": "pages/vehicles.html",
+  "/_error": "pages/_error.js",
+  "/roles": "pages/roles.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
