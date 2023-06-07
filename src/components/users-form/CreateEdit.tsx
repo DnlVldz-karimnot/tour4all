@@ -84,7 +84,7 @@ const CreateEdit: React.FC<Props> = ({
   };
 
   const handleSubmit = async (values: any, actions: any) => {
-    let data = null;
+    let dataToSend = null;
     if (type === "view") return;
 
     try {
@@ -99,20 +99,35 @@ const CreateEdit: React.FC<Props> = ({
             key = data.id;
           }
         }
-        data = {
+        dataToSend = {
           ...values,
           picture: key,
         };
-        await createUser(data);
+        await createUser(dataToSend);
         notify("success", "Se ha creado exitosamente");
       }
 
       if (type === "edit") {
-        data = {
-          ...values,
-        };
+        let key = "";
+        if (image) {
+          const fd = new FormData();
+          fd.append("file", image);
+          const { data, state, error }: Responsepetition = await upload(fd);
+          if (state) {
+            console.log(data);
+            key = data.id;
+          }
+          dataToSend = {
+            ...values,
+            picture: key,
+          };
+        } else {
+          dataToSend = {
+            ...values,
+          };
+        }
 
-        await updateUser(user.id, data);
+        await updateUser(user.id, dataToSend);
         notify("success", "Se ha actualizado");
       }
 
