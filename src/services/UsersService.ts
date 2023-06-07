@@ -4,7 +4,7 @@ import { _apiUrl } from "@/utils/constants";
 import { User } from "next-auth";
 import { AxiosRequestHeaders } from "axios";
 
-const prefix = "/users";
+const prefix = "/user";
 
 export async function getAllUsers() {
   try {

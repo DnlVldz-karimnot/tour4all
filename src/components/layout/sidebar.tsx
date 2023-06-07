@@ -136,6 +136,21 @@ const SideBar = () => {
               </li>
               <li className="nav-item">
                 <Link
+                  href="../users"
+                  className={
+                    currentPath === "/users"
+                      ? "nav-link mininav-toggle collapsed active"
+                      : "nav-link mininav-toggle collapsed"
+                  }
+                >
+                  <i className="pli-user fs-5 me-2" />
+                  <span className="nav-label mininav-content ms-1">
+                    Usuarios
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
                   href="../advertisements"
                   className={
                     currentPath === "/advertisements"

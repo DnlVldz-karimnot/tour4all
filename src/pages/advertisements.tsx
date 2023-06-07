@@ -11,7 +11,6 @@ import BorderColorIcon from "@mui/icons-material/BorderColor";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { Role } from "@/types/Role";
 import { getAllRoles } from "@/services/RolesService";
-import CircularProgress from "@mui/material/CircularProgress";
 import DataTableCustom from "@/components/ui/DataTableCustom";
 import { notify } from "@/utils/constants";
 import { Responsepetition } from "@/types/Responsepetition";
@@ -158,7 +157,7 @@ const Advertisements: FC = () => {
                       aria-current="page"
                     >
                       <Typography sx={{ fontWeight: "bolder" }} mb={1}>
-                        USUARIOS
+                        Anuncios
                       </Typography>
                     </li>
                   </ol>
