@@ -43,7 +43,7 @@ export async function createUser(values: any) {
 
 export async function updateUser(id: number, values: any) {
   try {
-    const response = await httpClient.put(prefix, values);
+    const response = await httpClient.patch(prefix + "/" + id, values);
     return {
       state: true,
       data: response,
