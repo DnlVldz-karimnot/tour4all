@@ -105,6 +105,9 @@ const CreateEdit: React.FC<Props> = ({
       }
 
       if (type === "edit") {
+        if (values.password === "") {
+          delete values.password;
+        }
         let key = "";
         if (image) {
           const fd = new FormData();
