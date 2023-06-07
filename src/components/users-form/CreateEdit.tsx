@@ -47,9 +47,6 @@ const CreateEdit: React.FC<Props> = ({
     email: Yup.string()
       .required("El correo electrónico es requerido")
       .email("Ingresa un correo electrónico válido"),
-    password: Yup.string()
-      .required("La contraseña es requerida")
-      .min(8, "La contraseña debe tener al menos 8 caracteres"),
     isActive: Yup.boolean().required("Indica si el usuario está activo o no"),
   });
 
